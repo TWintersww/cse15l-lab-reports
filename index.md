@@ -25,10 +25,10 @@ Horizontal rule:
 
 ---
 
-'new ArrayList<>();' is in inline code format
+`new ArrayList<>();` is in inline code format
 
-'''
+```
 cout << "Hello world" << endl;
 coud << "bye now" << endl;
-'''
+```
 this is a code block
