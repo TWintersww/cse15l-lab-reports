@@ -4,7 +4,7 @@
 ## `cd` command
 ---
 
-1. `cd` with no argument - run in `/home` - no error
+1. `cd` with no argument - run in `/home` - no error\
    Nothing happens. the `cd` command seems to need an argument to a path we can change to. Passing in no argument lets us stay in our working directory.
 ![cd1](lab1images/cd1.jpeg)
 2. `cd` with path to directory as argument - run in `/home` - no error
