@@ -6,9 +6,10 @@
 
 1. `cd` with no argument - run in `/home` - no error
    Nothing happens. the `cd` command seems to need an argument to a path we can change to. Passing in no argument lets us stay in our working directory.
-2. `cd` with path to directory as argument - run in `/home` - no error
+![cd1](lab1images/cd1.jpeg)
+3. `cd` with path to directory as argument - run in `/home` - no error
    Our working directory is changed to our specified directory. Our new working directory is shown on the left terminal prompt in green.
-3. `cd` with path to file as argument - run in `/home/lecture1` - error
+4. `cd` with path to file as argument - run in `/home/lecture1` - error
    An error message pops up saying that our passed in argument is not a directory. Apparently, only directory paths can be passed as arguments to the `cd` command.
 
 ## `ls` command
