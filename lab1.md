@@ -5,9 +5,11 @@
 ---
 
 1. `cd` with no argument - run in `/home` - no error
+   `cd` with no argument - run in `/home/lecture1/messages` - no error
 ---
-   Nothing happens. the `cd` command seems to need an argument to a path we can change to. Passing in no argument lets us stay in our working directory.
+   When the `cd` command is run in the root directory, nothing seems to happen. BUT, when the command is run in a directory that is not the root directory, it automatically brings us back to the root directory. This can be useful if you're working in a specific directory and need a simple way to get back to root directory where you can access everything else.
 ![cd1](lab1images/cd1.jpeg)
+![cd4](lab1images/cd4.png)
 
 2. `cd` with path to directory as argument - run in `/home` - no error
 ---
