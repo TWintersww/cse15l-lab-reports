@@ -102,5 +102,4 @@ The same process as described above occurs, except that this time, the string in
 ---
 ## Part 3
 ---
-
-
+Before taking CSE15L, all of my programming experience was dong from a single computer - mine. Code I wrote was run locally, or run on a local host. Weeks 2 and 3 were the first time I connected to a remote system via ssh. I learned how to start a server on a remote system from my computer and how I could transfer files between my computer and the remote system using the scp command.
