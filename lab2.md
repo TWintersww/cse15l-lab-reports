@@ -58,16 +58,22 @@ class ChatServer {
 
 ### Domain / Root Domain
 ![aa1](lab2images/aa1.png)
+
+
 The  `handleRequest(URI url)` method is called. The url which is entered into the browser is passed in as an argument. Because the path of the url is the root domain, the code inside the if statement is run. The string "hello" is displayed on the browser. The 2 Array Lists `userA` and `stringA` that hold the query inputs are left unchanged from when they were instantiated.
 
 
 ### Using `/add-message?s=Hello&user=jpolitz`
 ![aa2](lab2images/aa2.png)
+
+
 The  `handleRequest(URI url)` method is called. The url which is entered into the browser is passed in as an arguemnt. Because the path of the url is `/add-message`, the code in the else if statement is run. We split the query whenever we encounter the '=' and '&' characters into separate tokens and put them in the `String[] parameters`. Indexes 1 and 3 of `parameters` hold our desired inputs, s and user, respectively. They are added to their respective Array Lists `userA` and `stringA`, which are changed with every valid `/add-message` request. A local variable within the else if block, `String resultString`, is declared and added onto in the following for loop, which formats each entry and concatenates it to the end of `resultString`. 
 
 
 ### Using `/add-message?s=How are you&user=yash`
 ![aa3](lab2images/aa3.png)
+
+
 The same process as described above occurs, except that this time, the string input is "How are you" instead of "Hello" and the user input is "yash" instead of "jpolitz".
 
 
@@ -86,7 +92,7 @@ The same process as described above occurs, except that this time, the string in
 ![aa7](lab2images/aa7.png)
 
 
-``
+`/home/linux/ieng6/oce/86/e8wu/.ssh/authorized_keys`
 
 
 ### Terminal interaction without need for password
