@@ -8,19 +8,19 @@ For this part, I've chosen to look at the `reverseInPlace()` command in `ArrayEx
 ```
 @Test
 public void testReverseInPlace2() {
-int[] input1 = {1, 2, 3, 4, 5};
-ArrayExamples.reverseInPlace(input1);
-assertArrayEquals(new int[]{5, 4, 3, 2, 1}, input1);
+    int[] input1 = {1, 2, 3, 4, 5};
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{5, 4, 3, 2, 1}, input1);
 }
 ```
 2. Non-failure inducing input that was provided for us for `reverseInPlace()`:
 ```
 @Test 
-	public void testReverseInPlace() {
+public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}
+}
 ```
 3. Symptom:
 4. Bug fix:
