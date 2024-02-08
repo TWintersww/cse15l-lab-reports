@@ -57,6 +57,8 @@ My solution to this problem uses a similar, but slightly different approach. I i
 ## Part 2 - Researching Commands
 ---
 1. `-n` flag (from ChatGPT prompt)
+
+
 The `-n` flag for `grep` shows the line number of our matches. This is particularly useful if after using the `grep` command, we'd like to open up the particular text file and find the line itself. In my examples, I searched for certain strings and used the Command-click feature in VSCode to bring me to the line number.
 ![a3](lab3images/a3.png)
 ![a4](lab3images/a4.png)
@@ -64,19 +66,25 @@ The `-n` flag for `grep` shows the line number of our matches. This is particula
 ![a6](lab3images/a6.png)
 
 
-3. `-B#` and `-A#` flags (from ChatGPT prompt)
+2. `-B#` and `-A#` flags (from ChatGPT prompt)
+
+
 These two flags, each followed with a number, make grep show the corresponding number of lines before and after each match. This is useful if we'd like more context into our match so we might not have to open up the file itself to get the information we need. In my first example, I show 3 lines before and after each match. In my second example, I show 1 line before and after each match.
 ![a7](lab3images/a7.png)
 ![a8](lab3images/a8.png)
 
 
-5. `-o` flag combined with pipe (from ChatGPT prompt)
+3. `-o` flag combined with pipe (from ChatGPT prompt)
+
+
 The `-o` flag only shows the matched string and nothing else. If we're only interested in seeing how many times a string appears in our files, we can use the `grep -o` command piped with `wc -l` to show the number of times the target string appears in our files.
 ![a9](lab3images/a9.png)
 ![a10](lab3images/a10.png)
 
 
-7. `-e` flag (from https://www.linuxbuzz.com/grep-command-examples-linux/#17_Grep_with_Multiple_Pattern)
+4. `-e` flag (from https://www.linuxbuzz.com/grep-command-examples-linux/#17_Grep_with_Multiple_Pattern)
+
+
 The `-e` flag allows us to use multiple find patterns within a single `grep` command. If we were interested in finding all instances of the string "dog" and "cat" for example, we now could find their occurrences with a single command rather than two.
 ![a11](lab3images/a11.png)
 ![a12](lab3images/a12.png)
