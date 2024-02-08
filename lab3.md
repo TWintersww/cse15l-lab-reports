@@ -23,7 +23,7 @@ For this part, I've chosen to look at the `reverseInPlace()` command in `ArrayEx
 	}
 ```
 3. Symptom:
-4. Bug fix:
+4. Bug fix:\n
 Before:
 ```
   Changes the input array to be in reversed order
