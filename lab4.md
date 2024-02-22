@@ -10,7 +10,7 @@ Keys pressed:
 - `$ ssh e8wu@ieng6-201.ucsd.edu`
 
 
-![img1](image.jpg)
+![img1](lab4images/i1.png)
 
 
 ---
@@ -24,6 +24,10 @@ Keys pressed:
 - `$ git clone <sshurl>`
 - `$ ls`
 
+
+![img2](lab4images/i2.png)
+
+
 ---
 ## Step 6
 ---
@@ -35,6 +39,9 @@ You should get an error message saying that the test timed out.
 Keys pressed:
 - `$ cd <cloned-repository-name>`
 - `$ bash test.sh`
+
+
+![img3](lab4images/i3.png)
 
 
 ---
@@ -52,6 +59,10 @@ Keys pressed:
 - r2
 - :wq!
 
+
+![img6](lab4images/i6.png)
+
+
 ---
 ## Step 8
 ---
@@ -65,6 +76,9 @@ Keys pressed:
 - `$ bash test.sh`
 
 
+![img7](lab4images/i7.png)
+
+
 ---
 ## Step 9
 ---
@@ -76,3 +90,7 @@ Keys pressed:
 - `$ git add .`
 - `$ git commit -m "<commit message>"`
 - `$ git push origin main`
+
+
+![img4](lab4images/i4.png)
+![img5](lab4images/i5.png)
