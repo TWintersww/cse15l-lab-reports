@@ -68,11 +68,11 @@ Keys pressed:
 ---
 
 
-Press the <up> arrow key twice to go through our command history so that the `$ bash test.sh` command that we previously ran pops up again. Run this command and you should see that both test cases should pass.
+Press the `<up>` arrow key twice to go through our command history so that the `$ bash test.sh` command that we previously ran pops up again. Run this command and you should see that both test cases should pass.
 
 Keys pressed:
-- < up >
-- < up >
+- `<up>`
+- `<up>`
 - (Enter)
 
 
