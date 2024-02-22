@@ -73,7 +73,7 @@ Press the <up> arrow key twice to go through our command history so that the `$ 
 Keys pressed:
 - < up >
 - < up >
-- `$ bash test.sh`
+- (Enter)
 
 
 ![img7](lab4images/i7.png)
