@@ -18,11 +18,12 @@ Keys pressed:
 ---
 
 
-Fork the repository and run the command `$ git clone <sshurl>`. You can run `$ ls` in the current directory to confirm that the clone was successful
+Fork the repository and run the command `$ git clone <sshurl>`. You can run `$ ls` in the current directory to confirm that the clone was successful. I named my fork evan-wu-lab7.
 
 Keys pressed:
-- `$ git clone <sshurl>`
-- `$ ls`
+- (on your fork of the repo) click the green code button. `Ctrl+C` the ssh url to copy
+- `$ git clone ` then `Ctrl+V` to paste the url
+- `$ ls` 
 
 
 ![img2](lab4images/i2.png)
@@ -33,11 +34,11 @@ Keys pressed:
 ---
 
 
-Run `$ cd <cloned-repository-name>` to change into your cloned directory. Next, run `$ bash test.sh` to run the bash script that compiles and runs all our java files.
+Run `$ cd <cloned-repository-name>`(the repo name will be different depending on what you chose to name your fork) to change into your cloned directory. Next, run `$ bash test.sh` to run the bash script that compiles and runs all our java files.
 You should get an error message saying that the test timed out.
 
 Keys pressed:
-- `$ cd <cloned-repository-name>`
+- `$ cd evan-wu-lab7`
 - `$ bash test.sh`
 
 
@@ -88,7 +89,7 @@ Now, the tests pass and everything is working. We want to commit and push our ch
 
 Keys pressed:
 - `$ git add .`
-- `$ git commit -m "<commit message>"`
+- `$ git commit -m "first commit"`
 - `$ git push origin main`
 
 
