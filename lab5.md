@@ -8,7 +8,7 @@ My working directory is /Users/evanwu/repos/labreport5. And within this director
 a BinSearch.java file with my implementation of binary search, a TestBinSearch.java file that contains my JUnit tests, the compiled .class files of those 2 java files, and a test.sh bash script
 that compiles and runs both java files in the current directory.
 
-//insert s1 and s2
+
 ![img1](lab5images/s1.png)
 ![img2](lab5images/s2.png)
 
@@ -81,7 +81,7 @@ The test expected 5, as we can confirm that key 30 is indeed at index 5 of the i
 the key 30 isn't in the int[] arr for some reason. I suspect there is something with the termination condition of the recursive method, and that the code terminates early and returns -1 
 instead of being able to find key 30. 
 
-//insert s3
+
 ![img3](lab5images/s3.png)
 
 ---
@@ -121,26 +121,26 @@ jdb -classpath ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. org.junit.ru
 Then, I ran the java debugger with the bash script and instructed it to stop at line 16 of TestBinSearch.java, just before we run the final test. This allows me to later user other jdb
 commands to slowly step through the code to see what's went wrong.
 
-//insert s4 here
+
 ![img4](lab5images/s4.png)
 
 After using a combination of step and local commands to step through code and see all local variables, respectively, 
 I ended up at the end of the first iteration of the BinSearch.binSearchHelper() method call. The contents of step and local commands are shown in the screenshot below. 
 low is 0, high is 5, and mid is 2 as expected.
 
-//insert s5 here
+
 ![img5](lab5images/s5.png)
 
 After the second iteration, low is 3, high is 5, and mid is 4 as expected.
 
-//insert s6 here
+
 ![img6](lab5images/s6.png)
 
 At the third iteration, something weird happens. As we step through the code a few more times, the line `return -1;` executes for some reason when 
 low is 5 and high is 5. What should be happening is that we should check if the value at index 5 of arr is equal to the key. Instead, we short circuit to the termination condition 
 and end the method call early. 
 
-//insert s7 here
+
 ![img7](lab5images/s7.png)
 
 We've now found our bug. The base case shouldn't occur when low and high are equal to each other. Rather, it should occur when low is greater than high to really make sure that we've 
@@ -149,12 +149,13 @@ checked all possible indices in our binary search.
 We fix our code, changing the termination condition in BinSearch.java `if (low == high)` to `if (low > high)`. Running the JUnit tests again with `bash test.sh` shows that all test cases pass.
 Our code is now fixed.
 
-//insert s8 and s9 here
+
 ![img8](lab5images/s8.png)
 ![img9](lab5images/s9.png)
 
 
 Final directory structure
+```
 +-- labreport5
 |    +-- lib
 |        +-- junit-4.13.2.jar
@@ -163,9 +164,10 @@ Final directory structure
 |    +-- TestBinSearch.java
 |    +-- test.sh
 |    +-- testDebug.sh
+```
 
 ---
-## Response from TA
+## Reflection
 ---
 
 The most interesting and most useful thing I learned in second quarter was using the java debugger. In CSE12, when I debugged failed JUnit tests, it was either by paper-and-pencil iterating through code or by using print statements. Learning about jdb added yet another tool to my toolkit that I could use in my ide to step through code, line by line or method by method call at a time and easily dump the contents of all stack-held variables for me to see. Vim was also quite interesting. I'm still quite bad at using it, but I can definitely see how it could improve efficiency. Vim is to coders as Microsoft word is to writers, it's simply a better fit for what we do.
