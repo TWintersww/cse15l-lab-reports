@@ -15,6 +15,8 @@ that compiles and runs both java files in the current directory.
 This is the content of my 2 java files and bash script file:
 
 - BinSearch.java
+
+
 ```
 public class BinSearch {
 
@@ -45,7 +47,11 @@ public class BinSearch {
 }
 ```
 
+
+
 - TestBinSearch.java
+
+
 ```
 import org.junit.Before;
 import org.junit.Test;
@@ -67,13 +73,18 @@ public class TestBinSearch {
 }
 ```
 
+
+
 - test.sh
+
+
 ```
 set -e
 
 javac -cp ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. *.java
 java -cp ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore TestBinSearch
 ```
+
 
 When I run the bash script in my terminal with the command `bash test.sh`, the JUnit output says only 4 out of my 5 test cases passed. 
 Reading the JUnit output, the last test case `assertEquals(5, BinSearch.binSearch(arr, 30));` at line 16 of TestBinSearch.java does not pass for some reason. 
@@ -94,10 +105,12 @@ that there is probably something wrong with the internal logic of the code. Have
 
 You could try running these commands, then using jdb's tools to iterate through the failing test case to inspect what's happening under the hood. 
 
+
 ```
 javac -g -cp ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. *.java
 jdb -classpath ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore TestBinSearch
 ```
+
 
 Recall that the -g flag in the first line is responsible for generating extra debugging information that goes into our .class file during compile time that makes using jdb possible.
 Also, pay attention to the minor change from `-cp` to `-classpath` in the second line. 
@@ -111,12 +124,15 @@ Good luck!
 I first created another bash file named `testDebug.sh` which contains the TA's commands for using the java debugger. Code listed below
 
 - testDebug.sh
+
+
 ```
 set -e
 
 javac -g -cp ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. *.java
 jdb -classpath ./lib/junit-4.13.2.jar:./lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore TestBinSearch
 ```
+
 
 Then, I ran the java debugger with the bash script and instructed it to stop at line 16 of TestBinSearch.java, just before we run the final test. This allows me to later user other jdb
 commands to slowly step through the code to see what's went wrong.
