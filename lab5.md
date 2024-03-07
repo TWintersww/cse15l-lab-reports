@@ -14,7 +14,7 @@ that compiles and runs both java files in the current directory.
 
 This is the content of my 2 java files and bash script file:
 
-- BinSearch.java
+BinSearch.java
 
 
 ```
@@ -49,7 +49,7 @@ public class BinSearch {
 
 
 
-- TestBinSearch.java
+TestBinSearch.java
 
 
 ```
@@ -75,7 +75,7 @@ public class TestBinSearch {
 
 
 
-- test.sh
+test.sh
 
 
 ```
@@ -123,7 +123,7 @@ Good luck!
 
 I first created another bash file named `testDebug.sh` which contains the TA's commands for using the java debugger. Code listed below
 
-- testDebug.sh
+testDebug.sh
 
 
 ```
