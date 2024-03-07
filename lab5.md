@@ -144,3 +144,13 @@ Our code is now fixed.
 
 //insert s8 and s9 here
 
+
+Final directory structure
++-- labreport5
+|    +-- lib
+|        +-- junit-4.13.2.jar
+|        +-- hamcrest-core-1.3.jar
+|    +-- BinSearch.java
+|    +-- TestBinSearch.java
+|    +-- test.sh
+|    +-- testDebug.sh
